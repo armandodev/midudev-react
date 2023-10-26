@@ -1,0 +1,32 @@
+Para crear una app de React, necesitaremos utilizar un empaquetador de aplicaciones web, como create react app, que nos permitirá crear una aplicación de React con un solo comando. Pero en este caso utilizaremos Vite.
+
+Vite es un empaquetador de aplicaciones web que permite crear aplicaciones web con React, Vue, LitElement, Svelte y Vanilla JS. Vite es un empaquetador de aplicaciones web que permite crear aplicaciones web con React, Vue, LitElement, Svelte y Vanilla JS.
+
+Para utilizar Vite, necesitaremos tener instalado Node.js y npm.
+
+En nuestro repositorio, lo haremos multi-paquete porque en este mismo tendremos muchos proyectos, por lo que necesitaremos crear un directorio para nuestro proyecto de React.
+
+Primero inicializaremos nuestro proyecto con npm ejecutando el siguiente comando:
+
+npm init -y
+
+Dentro crearemos una carpeta llamada proyectos (mkdir proyectos), entraremos a proyectos (cd proyectos) y dentro de el inicializaremos el primer proyecto de Vite con el siguiente comando:
+
+npm create vite@latest
+
+Nos preguntara el nombre de nuestro proyecto, en este caso le pondremos 00-hola-mundo, luego nos preguntara que framework queremos utilizar, en este caso seleccionaremos React.
+
+Y luego nos preguntara si queremos usar JS o TS, en este caso seleccionaremos JS.
+Ademas agrega si queremos que use JS + SWC, que SWC es un compilador echo en Rust y mismo que siempre usaremos, en este caso seleccionaremos lo seleccionaremos.
+
+Abrimos la carpeta 00-hola-mundo y dentro de ella ejecutaremos el siguiente comando:
+
+npm install 
+
+Esto instalara todas las dependencias de nuestro proyecto.
+
+Luego ejecutaremos el siguiente comando:
+
+npm run dev
+
+Esto iniciara nuestro servidor de desarrollo, y nos mostrara un mensaje de que nuestro servidor esta corriendo en http://localhost:3000.

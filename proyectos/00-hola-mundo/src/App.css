@@ -1,0 +1,94 @@
+.tw-followCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.tw-followCard-header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tw-followCard-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.tw-followCard-infoUserName {
+  opacity: 0.6;
+}
+
+.tw-followCard-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.tw-followCard-button {
+  width: 140px;
+  cursor: pointer;
+  margin-left: 16px;
+  border: 0;
+  border-radius: 999px;
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  -ms-border-radius: 999px;
+  -o-border-radius: 999px;
+  padding: 6px 16px;
+  box-sizing: border-box;
+  font-weight: bold;
+  transition: 150ms;
+  -webkit-transition: 150ms;
+  -moz-transition: 150ms;
+  -ms-transition: 150ms;
+  -o-transition: 150ms;
+}
+
+.tw-followCard-button:hover {
+  background-color: #ddd;
+  transition: 300ms ease background-color;
+  -webkit-transition: 300ms ease background-color;
+  -moz-transition: 300ms ease background-color;
+  -ms-transition: 300ms ease background-color;
+  -o-transition: 300ms ease background-color;
+}
+
+.tw-followCard-button.is-following {
+  background-color: transparent;
+  outline: 1px solid #fff;
+  color: #fff;
+}
+
+.tw-followCard-button.is-following:hover {
+  background-color: rgba(221 40 40 / 20%);
+  color: #ff5454;
+  outline: none;
+  transition: 300ms ease all;
+  -webkit-transition: 300ms ease all;
+  -moz-transition: 300ms ease all;
+  -ms-transition: 300ms ease all;
+  -o-transition: 300ms ease all;
+}
+
+.tw-followCard-button.is-following .tw-followCard-buttonText {
+  display: block;
+}
+
+.tw-followCard-stopFollow {
+  display: none;
+}
+
+.tw-followCard-button.is-following:hover .tw-followCard-stopFollow {
+  display: block;
+}
+
+.tw-followCard-button.is-following:hover .tw-followCard-buttonText {
+  display: none;
+}
