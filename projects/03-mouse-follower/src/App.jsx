@@ -4,6 +4,7 @@ function App () {
   const [enabled, setEnabled] = useState(false)
   const [position, setPosition] = useState({ x: 0, y: 0 })
 
+  // Pointer move
   useEffect(() => {
     const handleMove = (event) => {
       const { clientX, clientY } = event
@@ -19,6 +20,14 @@ function App () {
       setPosition({ x: 0, y: 0 })
     }
   }, [enabled])
+
+  useEffect(() => {
+    document.body.classList.toggle('no-cursor', enabled)
+
+    return () => {
+      document.body.classList.remove('no-cursor')
+    }
+  })
 
   return (
     <main>
