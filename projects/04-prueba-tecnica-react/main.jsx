@@ -1,8 +1,12 @@
 import { createRoot } from 'react-dom/client'
+import React from 'react'
+import { App } from './src/App'
 import './style.css'
 
 const root = createRoot(document.getElementById('root'))
 
 root.render(
-  <h1>Hola mundo</h1>
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 )
