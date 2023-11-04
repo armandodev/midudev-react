@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { CAT_ENDPOINT_FACT_URL, CAT_PREFIX_IMAGE_URL } from './constants'
+import { CAT_ENDPOINT_FACT_URL, CAT_PREFIX_IMAGE_URL, QUANTITY_WORDS } from './constants'
 import './App.css'
 
 export function App () {
@@ -13,9 +13,9 @@ export function App () {
         const { fact } = data
         setFact(fact)
 
-        const firstWord = fact.split(' ', 1).join(' ')
+        const firstWords = fact.split(' ', QUANTITY_WORDS).join(' ')
 
-        setImgInfo(`${firstWord}?fontSize=50&fontColor=white&type=square`)
+        setImgInfo(`${firstWords}?fontSize=20&fontColor=white&type=square`)
       })
   }, [])
 
