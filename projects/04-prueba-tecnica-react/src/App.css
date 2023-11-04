@@ -1,0 +1,25 @@
+#main {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  min-height: 100vh;
+  padding: 3rem 2rem;
+  box-sizing: border-box;
+}
+
+#m-title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+#fact-paragraph {
+  opacity: 0.8;
+  font-weight: 500;
+  max-width: 500px;
+}
+
+#cat-image {
+  width: 90%;
+  max-width: 500px;
+}

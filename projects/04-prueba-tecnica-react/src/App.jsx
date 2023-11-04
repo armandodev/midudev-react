@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { CAT_ENDPOINT_FACT_URL, CAT_PREFIX_IMAGE_URL } from './constants'
+import './App.css'
 
 export function App () {
   const [fact, setFact] = useState()
@@ -19,15 +20,12 @@ export function App () {
   }, [])
 
   return (
-    <main>
-      <h1>App de gatitos</h1>
-      {fact && <p style={{ maxWidth: '500px' }}>{fact}</p>}
+    <main id='main'>
+      <h1 id='m-title'>App de gatitos</h1>
+      {fact && <p id='fact-paragraph'>{fact}</p>}
       {imgInfo &&
         <img
-          style={{
-            width: '90%',
-            maxWidth: '500px'
-          }}
+          id='cat-image'
           src={CAT_PREFIX_IMAGE_URL + imgInfo}
           alt={`Image extracted using the first three words for ${fact}`}
         />}
