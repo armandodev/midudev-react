@@ -1,9 +1,40 @@
 import './App.css'
+import { Movies } from './components/Movies'
+import { useMovies } from './hooks/useMovies'
+import { useSearch } from './hooks/useSearch'
 
 function App () {
+  const movies = useMovies()
+  const { search, setSearch, error } = useSearch()
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+  }
+
+  const handleChange = (event) => {
+    setSearch(event.target.value)
+  }
+
   return (
     <>
-      <h1>React App</h1>
+      <header>
+        <h1>Buscador de películas</h1>
+        <form className='form' onSubmit={handleSubmit}>
+          <input
+            id='search'
+            onChange={handleChange}
+            type='search'
+            placeholder='Avengers, Batman, ...'
+            value={search}
+          />
+          <button>Buscar</button>
+        </form>
+      </header>
+
+      <main>
+        {error && <p style={{ color: '#f00' }}>{error}</p>}
+        <Movies movies={movies} />
+      </main>
     </>
   )
 }
