@@ -3,7 +3,7 @@ const ListOFMovies = ({ movies }) => {
     <ul className='movies'>
       {
         movies.map(movie => (
-          <li key={movie.id}>
+          <li key={movie.id} className='movie'>
             <img
               className='poster'
               src={movie.poster === 'N/A' ? 'https://linnea.com.ar/wp-content/uploads/2018/09/404PosterNotFound.jpg' : movie.poster}
