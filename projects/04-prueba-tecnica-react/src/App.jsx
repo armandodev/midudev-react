@@ -9,15 +9,15 @@ export function App () {
   useEffect(() => {
     fetch(CAT_ENDPOINT_FACT_URL)
       .then(response => response.json())
-      .then(data => {
-        const { fact } = data
-        setFact(fact)
-
-        const firstWords = fact.split(' ', QUANTITY_WORDS).join(' ')
-
-        setImgInfo(`${firstWords}?fontSize=20&fontColor=white&type=square`)
-      })
+      .then(data => setFact(data.fact))
   }, [])
+
+  useEffect(() => {
+    if (!fact) return
+
+    const firstWords = fact.split(' ', QUANTITY_WORDS).join(' ')
+    setImgInfo(`${firstWords}?fontSize=20&fontColor=white&type=square`)
+  }, [fact])
 
   return (
     <main id='main'>
