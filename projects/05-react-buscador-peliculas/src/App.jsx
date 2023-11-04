@@ -5,7 +5,7 @@ import { useSearch } from './hooks/useSearch'
 
 function App () {
   const { search, setSearch, error } = useSearch()
-  const { movies, getMovies } = useMovies(search)
+  const { movies, getMovies, loading, errorFetch } = useMovies(search)
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -34,7 +34,8 @@ function App () {
 
       <main>
         {error && <p style={{ color: '#f00' }}>{error}</p>}
-        <Movies movies={movies} />
+        {errorFetch && <p style={{ color: '#f00' }}>{errorFetch}</p>}
+        {loading ? <p>Cargando...</p> : <Movies movies={movies} />}
       </main>
     </>
   )
