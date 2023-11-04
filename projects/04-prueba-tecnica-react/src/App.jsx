@@ -8,7 +8,7 @@ export function App () {
 
   useEffect(() => {
     fetch(CAT_ENDPOINT_FACT_URL)
-      .then(response => response.json())
+      .then(response => response.json()) // TODO: handle errors if !response.ok
       .then(data => setFact(data.fact))
   }, [])
 
